@@ -1,0 +1,14 @@
+applications:
+- services:
+  - MADC2015API-MAS
+  - MADC2015API-Push
+  - MADC2015API-MobileData
+  - MADC2015API-Mobile Quality Assurance
+  disk_quota: 1024M
+  host: madc2015api
+  name: MADC2015API
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 128M
