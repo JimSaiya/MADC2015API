@@ -1,33 +1,35 @@
 {
-   "author": "IBM",
-	"engines": {
-		"node": "0.10.28"
-	},
-   "dependencies": {
-      "express": "4.*",
-      "body-parser": "*",
-      "ibmsecurity": "*",
-      "twilio": "*",
-      "ibmbluemix":"*",
-      "ibmdata":"*"
-   },
-   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-simple-mocha": "0.4.0",
-    "load-grunt-tasks": "~0.3.0",   
-    "time-grunt": "~0.2.9",
-    "chai": "*",
-    "mocha": "*",
-    "when": "*",
-    "request": "*",
-    "assert":"*"
-  },
-  "repository" : { 
-  },
+  "name": "MADC2015API",
+  "version": "0.0.1",
+  "description": "API For MyAmerica Developer Conference API Project from IBM",
   "scripts": {
-	"start": "node app.js"
-  },  
-  "description": "Starts a server which listens for user modules invocation requests.",
-  "license": "IBM",
-  "main": "app.js"
+    "start": "node app.js",
+    "test": "npm run lint && npm run spec",
+    "lint": "grunt lint",
+    "spec": "grunt spec"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "connect": "^3.3.4",
+    "connect-rest": "^1.7.6",
+    "mongoose": "3.8.22",
+    "morgan": "^1.5.1",
+    "request": "^2.53.0"
+  },
+  "engines": {
+    "node": "0.10.*"
+  },
+  "repository": {},
+  "devDependencies": {
+    "expect": "^1.6.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-exec": "^0.4.6",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.2.1"
+  },
+  "main": "app.js",
+  "author": "Exiquio Cooper-Anderson",
+  "license": "Currently propriatry property of IBM. TBD"
 }
