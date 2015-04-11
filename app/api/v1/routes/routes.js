@@ -1,7 +1,10 @@
 module.exports.apply = function(rest) {
     var modules = [
-        './test'
+        './test',
+        './weather'
     ];
 
-    modules.forEach(function(module) { require(module).apply(rest); });
+    modules.forEach(function(module) {
+        require(module).apply(rest);
+    });
 };
