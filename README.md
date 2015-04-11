@@ -1,17 +1,22 @@
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+http://openglobe.github.io/myamerica-devsummit/
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative](http://opensource.org/).
+This application will function as the starting point for a location based set of tools to
+find nearby federal recreation sites, details about the sites and other pertinent information.
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+This is the server side application. It is designed to run on IBM's Bluemix or any other Cloud
+Foundry based Platform as a Service (PaaS). It is built on Node.js and Bluemix's mobile first
+offering. This can be leveraged to deliver positive users experience with mobile clients like
+an Android appplication.
 
-Finally, consider defining some sprints and work items in Track & Plan to give 
-interested developers a sense of your cadence and upcoming enhancements.
+The goal is to hack together a Mashup application driven by this backend that is functional,
+useful and an enjoyable to work on by then end of 04/12/15 for the developer summit linked above.
+The backend currently pulls facilites from RIDB (http://usda.github.io/RIDB/#get-all-recreation-areas).
+It also pulls weather information from OpenWeatherMap (http:openweathermap.org).
+
+Feel free to contribute to the madness. Just try to follow and/or improve existing patterns in the code
+to keep this project somewhat organized and fun to hack.
+
+The live server lives here: http://madc2015api.mybluemix.net/
+
+NOTE: RIDB requires an API key. They are free. Look at config/database.js for how it's being used.
+http://usda.github.io/RIDB/#authentication
