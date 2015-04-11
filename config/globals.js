@@ -15,4 +15,5 @@ module.exports.apply = function(dirname) {
         .parse(process.env.VCAP_APPLICATION || JSON.stringify(localAppInfo));
     global.__services = JSON
         .parse(process.env.VCAP_SERVICES || JSON.stringify(localServices));
+    global.__RIDB_KEY = process.env.RIDB_KEY
 };

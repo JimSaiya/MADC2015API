@@ -1,7 +1,8 @@
 module.exports.apply = function(rest) {
     var modules = [
-        './test',
-        './weather'
+        './routes/test',
+        './routes/ridb',
+        './routes/weather'
     ];
 
     modules.forEach(function(module) {

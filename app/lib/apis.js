@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
-    Api = require(__base +  'app/api/v1/models/api.js'),
-    OpenWeatherMap = require('./openWeatherMap.js');
-    // RIDBj
+    Api = require(__base +  'app/api/v1/models/api'),
+    OpenWeatherMap = require('./openWeatherMap'),
+    RIDB = require('./ridb');
 
 var yieldTo = function(api) {
     Apis.callback(api);
@@ -30,7 +30,8 @@ var addOperations = function(api) {
 
             break;
         case 'RIDB':
-            // TODO
+            //api.fetchRecreationAreas = RIDB.fetchRecreationAreas;
+            api.fetchFacilities = RIDB.fetchFacilities;
 
             break;
         default:
@@ -61,9 +62,9 @@ var Apis = {
     api: null,
     callback: null,
     get: function(name, callback) {
-          Apis.callback = callback;
+        Apis.callback = callback;
 
-          implement(name);
+        implement(name);
     }
 };
 

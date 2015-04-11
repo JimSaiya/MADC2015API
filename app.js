@@ -7,7 +7,7 @@ var globals = require('./config/globals'),
     Settings = require('./config/settings'),
     Database = require('./config/database'),
     Seeds = require('./config/seeds'),
-    Routes = require('./app/api/v1/routes/routes');
+    Routes = require('./config/routes');
 
 var app = connect()
     .use(bodyParser.urlencoded({extended: true}))
